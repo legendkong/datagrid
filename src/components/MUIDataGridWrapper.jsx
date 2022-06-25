@@ -16,7 +16,7 @@ export const DEF_COL_DEFS = {
 }
 
 const gridStyles = {
-   '.MuiDataGrid-columnHeaderTitle': {
+   '.MuiDataGridWrapper-columnHeaderTitle': {
       fontWeight: 'bolder'
    }
 }
@@ -37,7 +37,7 @@ function CustomPagination () {
 }
 
 
-function MUIDataGrid (props) {
+function MUIDataGridWrapper (props) {
    const { tableHeight = '500px', ...dataGridProps } = props
 
    const mappedColumns = dataGridProps.columns.map((c) => ({
@@ -71,13 +71,8 @@ function MUIDataGrid (props) {
    )
 }
 
+MUIDataGridWrapper.PropTypes = {
+   tableHeight: PropTypes.string
 
-
-
-function MUIDataGridWrapper() {
-  return (
-    <div>MUIDataGridWrapper</div>
-  )
-}
 
 export default MUIDataGridWrapper
