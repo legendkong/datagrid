@@ -45,7 +45,30 @@ function MUIDataGrid (props) {
       ...c
    }))
 
-   return
+   return (
+      <div style={{height: tableHeight, width: '100%' }}>
+         <div style={{ display: 'flex', height: '100%' }}>
+            <div style={{ flexGrow: 1 }}>
+               <DataGrid
+                  sx={{ ...gridStyles, ...dataGridProps.sx }}
+                  disableColumnMenu
+                  initialState={{
+                     pagination: {
+                        pageSize: 10
+                     },
+                     ...dataGridProps.initialState
+                  }}
+                  components={{
+                     Pagination: CustomPagination,
+                     ...dataGridProps.components
+                  }}
+                  {...dataGridProps}
+                  columns={mappedColumns}
+               />
+            </div>
+         </div>
+      </div>  
+   )
 }
 
 
