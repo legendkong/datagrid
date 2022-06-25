@@ -36,6 +36,21 @@ function CustomPagination () {
    )
 }
 
+
+function MUIDataGrid (props) {
+   const { tableHeight = '500px', ...dataGridProps } = props
+
+   const mappedColumns = dataGridProps.columns.map((c) => ({
+      ...DEF_COL_DEFS,
+      ...c
+   }))
+
+   return
+}
+
+
+
+
 function MUIDataGridWrapper() {
   return (
     <div>MUIDataGridWrapper</div>
