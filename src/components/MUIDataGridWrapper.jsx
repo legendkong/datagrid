@@ -15,6 +15,18 @@ export const DEF_COL_DEFS = {
    disableReorder: true
 }
 
+const gridStyles = {
+   '.MuiDataGrid-columnHeaderTitle': {
+      fontWeight: 'bolder'
+   }
+}
+
+function CustomPagination () {
+   const apiRef = useGridApiContext()
+   const page = useGridSelector(apiRef, gridPageSelector)
+   const pageCount = useGridSelector(apiRef, gridPageCountSelector)
+}
+
 function MUIDataGridWrapper() {
   return (
     <div>MUIDataGridWrapper</div>
