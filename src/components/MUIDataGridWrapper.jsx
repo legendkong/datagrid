@@ -73,6 +73,6 @@ function MUIDataGridWrapper (props) {
 
 MUIDataGridWrapper.PropTypes = {
    tableHeight: PropTypes.string
-
+}
 
 export default MUIDataGridWrapper
